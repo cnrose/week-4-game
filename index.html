@@ -6,6 +6,7 @@
 	<title>Crystals Collector!</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
@@ -15,35 +16,38 @@
 	</header>
 	
 	<div class="instructions">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque neque non magna accumsan, pretium maximus leo dapibus. Mauris vitae scelerisque tellus, pulvinar aliquet justo. </p>
+		<p>You have been given a random number.</p>
 
-		<p>Praesent nec eros non leo cursus laoreet.</p>
+		<p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
 
-		<p>In in arcu tortor. Vestibulum aliquet, velit non ultricies interdum, risus ipsum pulvinar magna, at ullamcorper nisl metus ut nibh. Aliquam eu suscipit ipsum.</p>
+		<p>You win the game by matcing your total score to the random number. You lose the game if your total score goes above the random number.</p>
 
-		<p>Aliquam at rutrum massa. Nam id rutrum quam. Aenean at porttitor elit. Nullam tincidunt sapien nulla, a pretium odio maximus non.</p>
+		<p>The value of each crystal is hidden from you until you click on it.</p>
 
-		<p>Sed finibus porta tortor, ac consectetur leo congue et. Donec vitae massa sit amet metus auctor facilisis malesuada ac neque.</p>
+		<p>Each time the game starts, the value of each crystal will be changed.</p>
 	</div>	
 	
 	<div id="random-num">
 	</div>
 
 	<div class="score" id="wins-losses">
-		<p>Wins: </p>
-		<p>Losses: </p>
+		<p id="wins">Wins: </p>
+		<p id="losses">Losses: </p>
 	</div>	
-	
+	<div id="end-display">
+		<p id="hide"></p>
+	</div>
 	<div id="crystals">
-		<div class="crystal-image"><img src="assets/images/blue.png" alt="blue gem" class="image"></div>
-		<div class="crystal-image"><img src="assets/images/green.png" alt="green gem" class="image"></div>
-		<div class="crystal-image"><img src="assets/images/red.png" alt="red gem" class="image"></div>
-		<div class="crystal-image"><img src="assets/images/yellow.png" alt="yellow gem" class="image"></div>
+		<div class="crystal-image"><img src="assets/images/blue.png" alt="blue gem" class="image" id="blue-gem"></div>
+		<div class="crystal-image"><img src="assets/images/green.png" alt="green gem" class="image" id="green-gem"></div>
+		<div class="crystal-image"><img src="assets/images/red.png" alt="red gem" class="image" id="red-gem"></div>
+		<div class="crystal-image"><img src="assets/images/yellow.png" alt="yellow gem" class="image" id="yellow-gem"></div>
 	</div>
 	
 	<div class="user-score">Your Total Score Is: </div>
 
 	<div class="score" id="total-score"></div>
+
 	</div>
 </body>
 </html>
